@@ -61,7 +61,7 @@ const data: CandidateData[] = [
     lastName: "Akande",
     location: "Boston, USA",
     school: "Bachelor - MIT (2023 - 2023)",
-    hashtags: ["#top_candidate", "#top_candidate"],
+    hashtags: ["#top_candidate", "#top_candidate", "#me"],
     experience: "junior",
     tags: ["New York"],
     qualified: true,

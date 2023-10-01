@@ -56,7 +56,6 @@ function HomeScreen() {
   return (
     <div className="home">
       <div className="nav">
-        {/* Pass the 'opportunity' array directly from this file */}
         <HomeNav opportunity={opportunity} />
       </div>
       <div className="container">
