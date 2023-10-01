@@ -1,0 +1,248 @@
+.home {
+  background-color: var(--color-bg);
+  height: 100%;
+  position: relative;
+  .nav {
+    // position: sticky;
+    // top: 0;
+    // z-index: 200;
+  }
+  .home_nav {
+    padding: 20px 0px;
+    .content {
+      width: 100%;
+    }
+    .left {
+      h3 {
+        color: var(--color-blue);
+      }
+    }
+    .middle {
+      .select_filter {
+        width: 300px;
+
+        border-radius: 10px !important;
+        .option {
+          height: 40px !important;
+          width: 100%;
+          .value {
+            // background-color: var(--color-blue);
+          }
+        }
+        .select_option {
+          padding: 20px;
+          border-bottom: 1px solid var(--border-color);
+        }
+      }
+      /*======= MEDIA QUERIES (SMALL DEVICES) =======*/
+      @media screen and (max-width: 620px) {
+        display: none;
+      }
+    }
+    .right {
+      .icons {
+        .icon {
+          background-color: var(--color-white);
+          margin-right: 10px;
+          padding: 5px;
+          border-radius: 5px;
+          cursor: pointer;
+          position: relative;
+          bottom: 3px;
+          svg {
+            position: relative;
+            top: 6px;
+          }
+        }
+        /*======= MEDIA QUERIES (MEDIUM DEVICES) =======*/
+        @media screen and (max-width: 1130px) {
+          display: none;
+        }
+      }
+      .select {
+        width: 250px;
+      }
+      /*======= MEDIA QUERIES (SMALL DEVICES) =======*/
+      @media screen and (max-width: 890px) {
+        display: none;
+      }
+    }
+  }
+  .main {
+    gap: 20px;
+    width: 100%;
+    overflow: hidden;
+    /*======= MEDIA QUERIES (MEDIUM DEVICES) =======*/
+    @media screen and (max-width: 745px) {
+      flex-direction: column;
+    }
+    .side {
+      .side_filter {
+        .search_box {
+          width: 100%;
+          // margin-bottom: 20px;
+          background-color: var(--color-white);
+          border-radius: 5px;
+          padding: 0px 10px;
+          .icon {
+            color: var(--color-random);
+          }
+          input {
+            padding: 11px;
+            background-color: var(--color-white);
+            width: 100%;
+            &::placeholder {
+              color: var(--color-light-gray);
+            }
+          }
+        }
+        .menu {
+          margin-top: 30px;
+          .menu_list {
+            width: 300px;
+            /*======= MEDIA QUERIES (MEDIUM DEVICES) =======*/
+            @media screen and (max-width: 745px) {
+              width: 100%;
+            }
+          }
+        }
+        .menu-header {
+          background-color: transparent !important;
+          cursor: default !important;
+          color: var(--color-black) !important;
+          &:hover {
+            background-color: transparent !important;
+          }
+        }
+      }
+    }
+    .table {
+      width: 100%;
+
+      .home_list {
+        // width: 100%;
+        background-color: var(--color-white);
+        padding: 5px 10px;
+        position: relative;
+        overflow-x: scroll;
+        // &::-webkit-scrollbar {
+        //   display: none;
+        // }
+        /*======= MEDIA QUERIES (MEDIUM DEVICES) =======*/
+        @media screen and (max-width: 1005px) {
+          .content {
+            /* Add a fixed width and make it scrollable when needed */
+            min-width: 800px; /* Adjust this value as needed */
+            overflow-x: scroll;
+            white-space: nowrap; /* Prevent content from wrapping to new lines */
+            &::-webkit-scrollbar {
+              display: none;
+            }
+          }
+        }
+        .content {
+          .checkbox {
+            margin-right: 30px;
+          }
+          .header {
+            padding: 8px 0px;
+            border-bottom: 1px solid var(--border-color);
+            ul {
+              width: 100%;
+
+              li {
+                .candidates {
+                  span {
+                    margin-left: 5px;
+                  }
+                }
+                .candidates,
+                .qualified {
+                  font-weight: 700;
+                  color: var(--color-blue);
+                }
+                .f_flex {
+                  li {
+                    border-right: 1px solid var(--color-random);
+                    &:last-child {
+                      border-right: none;
+                    }
+                  }
+                  .disqualified {
+                    padding-right: 0px;
+                  }
+                  span {
+                    padding: 0px 40px;
+
+                    small {
+                      margin-left: 5px;
+                      background-color: var(--color-bg);
+                      width: 20px;
+                      height: 20px;
+                      position: relative;
+                      border-radius: 50%;
+                      color: var(--color-value);
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      font-size: 11px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .items {
+            height: 600px;
+            // width: 530px;
+            overflow: scroll;
+            &::-webkit-scrollbar {
+              display: none;
+            }
+          }
+          .list {
+            padding: 10px 0px;
+            border-bottom: 1px solid var(--border-color);
+            &:last-child {
+              border-bottom: none;
+            }
+
+            .shortname {
+              background-color: var(--color-short-bg);
+              color: var(--color-short);
+              width: 65px;
+              height: 65px;
+              border-radius: 50%;
+              margin-right: 25px;
+            }
+            .info {
+              display: flex;
+              flex-direction: column;
+              line-height: 28px;
+              .location {
+                font-weight: 600;
+              }
+              .hashtags {
+                color: var(--color-blue);
+                width: max-content;
+                span {
+                  cursor: pointer;
+                }
+              }
+              .tags {
+                width: max-content;
+                span {
+                  background-color: var(--color-tag-bg);
+                  color: var(--color-tag);
+                  padding: 2px 10px;
+                  border-radius: 10px;
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
